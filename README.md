@@ -1,6 +1,8 @@
 # nodejs-mongodb-angularjs
 Projeto desenvolvido com NodeJS + MongoDB + AngularJS
 
+Utilizei a API do site http://www.omdbapi.com/ para buscar informações de livros.
+
 Para rodar este projeto é necessário ter o MongoDB<br>
 Para fazer download é neste link<br>
 https://www.mongodb.com/download-center/community<br><br>
