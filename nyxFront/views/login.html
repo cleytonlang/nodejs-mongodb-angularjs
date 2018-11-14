@@ -1,0 +1,52 @@
+<div class="login-screen row align-items-center">
+    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-8" style="margin:auto">
+        <div class="login-container">
+            <div class="row no-gutters">
+                <form name="formLogin" ng-submit="getLogin(form)">
+                    <div class="col-sm-12">
+                        <div class="login-box">
+                            <a href="#" class="login-logo text-center">
+                                <img src="../theme/img/logo-nyx.png" alt="Teste Nyx" class="logo-login">
+                            </a>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="username"><i class="icon-account_circle"></i></span>
+                                <input type="text" class="form-control" placeholder="Login" aria-label="Login" aria-describedby="Login" ng-model="form.login">
+                            </div>
+                            <br>
+
+                            <div class="input-group">
+                                <span class="input-group-addon" id="password"><i class="icon-verified_user"></i></span>
+                                <input type="password" class="form-control" placeholder="Senha" aria-label="senha" aria-describedby="senha" ng-model="form.senha">
+                            </div>
+                            <div class="alert alert-warning" ng-if="erroLogin" style="margin-top: 10px;">
+                                <i class="icon-warning2"></i>
+                                <strong>Não deu! </strong>
+                                <span ng-bind="erroLogin"></span>
+                            </div>
+                            <div class="actions clearfix">
+                                <button type="submit" ng-disabled="formLogin.$invalid" class="btn btn-primary col-sm-12">
+                                    <span class="icon-unlocked"></span> Acessar
+                                </button>
+                                <button type="button" class="btn btn-primary col-sm-12" style="margin-top:10px" ng-click="solicitarcadastro()">
+                                    <span class="icon-user-check"></span> Solicitar Cadastro
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12" ng-show="msg">
+                        <div class="alert alert-warning">
+                            <h6>
+                                <i class="icon-warning2"></i>
+                                <strong class="text-info">Alerta!</strong>
+                            </h6>
+                            <p ng-bind="msg"></p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

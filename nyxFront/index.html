@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="appLivros">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,shrink-to-fit=no">
+    <meta name="description" content="Nyx Livros" />
+    <meta name="keywords" content="Nyx Livros" />
+    <meta name="author" content="Nyx Livros" />
+    <link rel="shortcut icon" href="theme/img/favicon.png" />
+    <title>Sistema de Livros</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="theme/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="theme/fonts/icomoon/icomoon.css" />
+    <link rel="stylesheet" href="theme/css/main.css" />
+
+    <!-- Notify -->
+    <link rel="stylesheet" href="theme/vendor/notify/notify-flat.css" />
+
+    <!-- Other CSS includes plugins - Cleanedup unnecessary CSS -->
+    <!-- Chartist CSS -->
+    <link href="theme/vendor/chartist/css/chartist.min.css" rel="stylesheet" />
+    <link href="theme/vendor/chartist/css/chartist-custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="content-fluid">
+        <main ng-view></main>
+    </div>
+
+    <!-- tema -->
+    <script src="theme/js/jquery.js"></script>
+    <script src="theme/js/jquery.easing.1.3.js"></script>
+    <script src="theme/vendor/notify/notify.js"></script>
+    <script src="theme/vendor/notify/notify-custom.js"></script>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+
+    <script src="theme/js/ngStorage.min.js"></script>
+    <script src="theme/js/locale.js"></script>
+    <script src="app.js"></script>
+
+    <!-- controllers -->
+    <script src="factory/comum.js"></script>
+    <script src="controllers/login-controller.js"></script>
+    <script src="controllers/cadastro-controller.js"></script>
+    <script src="controllers/livros-controller.js"></script>
+
+    <!-- diretivas -->
+    <script src="directives/menu.directive.js"></script>
+</body>
+
+</html>

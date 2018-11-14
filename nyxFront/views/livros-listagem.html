@@ -1,0 +1,62 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-center">
+        <menu></menu>
+    </nav>
+</header>
+
+<div class="main-content back-trasparente" ng-init="buscarLivros()">
+    <form name="formSolicitacaoCadastro" ng-submit="solicitarCadastro(form)" novalidate>
+        <div class="row gutters">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-xl-9 col-lg-10 col-md-10 col-sm-12">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">Listagem de Livros</div>
+                            <div class="card-body">
+
+                                <div class="row" ng-show="!livros">
+                                    <div class="col-sm-12">
+                                        <div class="alert alert-warning">
+                                            <h6>
+                                                <i class="icon-warning2"></i>
+                                                <strong class="text-success">Alerta!</strong>
+                                            </h6>
+                                            <p>Nenhum livro cadastrado.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" ng-show="livros">
+                                    <div class="col-md-6" ng-repeat="livro in livros">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>
+                                                    <strong class="text-primary" ng-bind="livro.titulo"></strong>
+                                                </h5>
+                                            </div>
+                                            <div class="col-md-4" ng-if="livro.capa != 'N/A'">
+                                                <img class="img-fluid img-thumbnail" ng-src="{{livro.capa}}">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <span ng-bind="livro.resumo"></span>
+                                                <button type="button" ng-if="existe && !cadastrou" ng-click="adicionarLivro()" class="btn btn-outline-primary btn-block btn-top-busca"><span class="icon-plus-outline"></span> Adicinar a minha lista</button>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
