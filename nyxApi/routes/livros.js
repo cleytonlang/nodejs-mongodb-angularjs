@@ -47,4 +47,11 @@ router.post('/livros', (req, res) => {
 
 })
 
+//excluir livro
+router.post('/livros/remover', (req, res) => {
+    Livro.remove({ _id: req.body.id }).then(() => {
+        res.status(200).json({ msg: "Removido com sucesso!" });
+    });
+})
+
 module.exports = router

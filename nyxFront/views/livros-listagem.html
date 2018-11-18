@@ -41,7 +41,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span ng-bind="livro.resumo"></span>
-                                                <button type="button" ng-if="existe && !cadastrou" ng-click="adicionarLivro()" class="btn btn-outline-primary btn-block btn-top-busca"><span class="icon-plus-outline"></span> Adicinar a minha lista</button>
+                                                <button type="button" ng-click="removerLivro(livro._id)" class="btn btn-outline-primary btn-block btn-top-busca"><span class="icon-times-outline"></span> Excluir livro</button>
                                             </div>
                                             <div class="col-md-12">
                                                 <hr>

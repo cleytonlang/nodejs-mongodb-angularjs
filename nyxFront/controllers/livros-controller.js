@@ -33,5 +33,12 @@ app.controller('livrosCtrl', function($scope, comum, $location, $localStorage) {
         });
     }
 
+    $scope.removerLivro = function(id) {
+        comum.post('/livro/livros/remover', { 'id': id }).then(function successCallback(response) {
+            if (response.data.msg) {
+                $location.url('livros-listagem');
+            }
+        });
+    }
+
 });
-''
